@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+svg {
+    fill: #eee;
+}
+
+svg:hover {
+    fill: #fff;
+}
+
+.navigation * {
+    color: #eee;
+    font-family: sans-serif;
+}
+
+.navigation {
+    position: fixed;
+    display: block;
+    width: auto;
+    height: 96%;
+    left: 2%;
+    top: 2%;
+    background: #000;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    margin: 4px !important;
+    padding: 10px !important;
+
+}
+
+.button,
+.navigation .list {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.navigation .logo {
+    width: auto;
+    display: flex;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.navigation .logo span {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: roboto;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 107px;
+    height: -webkit-fill-availavle;
+}
+
+.group .list {
+    position: relative;
+    margin: 4px;
+}
+
+.group .list .title {
+    width: 160px;
+    display: block;
+    transition: 0.3s;
+}
+.group .list .title span{
+    margin-left: 10px;
+}
+.group .list .icon{
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+    display: block;
+    overflow: hidden;
+}
+
+.group .list.active{background: #fff3;}
+.group .list.active svg{fill: #00f9f9;}
+.group .list.active span{color: #00f9f9;}
+
+.navigation .list:hover , .navigation .button:hover{
+    background: #fff2;
+}
+
+.navigation.hide .list:hover .title span{
+    width: auto;
+    position: absolute;
+    display: block;
+    background: #000;
+    padding: 8px 12px !important;
+    left: 48px;
+    top: 5px;
+    border-radius: 3px;
+
+}
+
+.navigation.hide .list:hover::after{
+    content: '';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 38%;
+    left: 54px;
+    background: #000;
+    transform: rotate(45deg);
+}
+
+
+.user{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    background: #000;
+    border-radius: 4px;
+    border-top: 1px solid #fff2;
+}
+
+.user .user-icon{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 6px;
+    border-radius: 5px;
+    background: #000;
+    overflow: hidden;
+}
+
+.user .flexCe{
+    display: flex;
+    width: auto;
+    align-items: center;
+    flex: 1;
+}
+
+
+
+.user .user-info{
+    text-align: left;
+    padding-left: 10px;
+    flex: 1;
+    padding: 5px;
+}
+.user .user-info .user-name{font-size: 18px;
+font-weight: 500;}
+
+.user .user-info .user-type{
+    font-size: 12px;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.user .logout .title{display: none;}
+.user .logout .icon{
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    color: #000;
+    cursor: pointer;
+}
+
+
+.navigation.hide .logo,
+.navigation.hide .title,
+.navigation.hide .flexCe{ 
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
